@@ -212,6 +212,23 @@ def difference_quotient(f,x,h):
 def square(x):
 	return (x*x)
 	
+# Gradient Descent
+	
+def partial_difference_quotient(f,v,i,h):
+	"""compute the ith partial difference quotient of f at v"""
+	
+	w = [V_j + (h if j==i else 0) for j, V_j in enumerate(v)]
+	
+	return((f[w]-f(v)) / h)
+	
+def estimate_gradient(f,v,h = 0.0001):
+	return([partial_difference_quotient(f,v,i,h) for i, _ in enumerate(v)])
+	
+
+
+	
+	
+	
 
 		
 	
