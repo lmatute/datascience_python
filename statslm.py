@@ -201,6 +201,18 @@ def beta_pdf(x, alpha, beta):
 	if x <= 0 or x >= 1:
 		return(0)
 	return(x ** (alpha -1) * (1-x) ** (beta-1) / B(alpha,beta))
+	
+def sum_of_squares(v):
+	"""Computes the sum of squares of elements in v"""
+	return(sum(v_i ** 2 for v_i in v))
+
+def difference_quotient(f,x,h):
+	return((f(x+h) - f(x)) / h)
+	
+def square(x):
+	return (x*x)
+	
+
 		
 	
 	
